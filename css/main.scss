@@ -2,11 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-
-
+@import "bourbon/bourbon";
 
 // Our variables
-$font: Helvetica, Arial, sans-serif;
+$header-font: "Imprint MT Shadow", Times, sans-serif;
 $font-size:   16px;
 
 $spacing-unit:     30px;
@@ -14,30 +13,31 @@ $spacing-unit:     30px;
 $text-color:       white;
 $background-color: #9D969E;
 $brand-color:      #210426;
+$brand-hover: lighten($brand-color, 1%);
+$brand-hover2: lighten($brand-color, 5%);
 
 // $grey-color:       #828282;
 // $grey-color-light: lighten($grey-color, 40%);
 // $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
+// $content-width:    800px;
+// $on-palm:          600px;
+// $on-laptop:        800px;
+//
+// @mixin media-query($device) {
+//     @media screen and (max-width: $device) {
+//         @content;
+//     }
+// }
+// // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
 //         padding-right: $spacing-unit / 2;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
-// @mixin media-query($device) {
-//     @media screen and (max-width: $device) {
-//         @content;
-//     }
-// }
+
 
 
 
@@ -46,4 +46,5 @@ $on-laptop:        800px;
         "base",
         "layout",
         "syntax-highlighting"
+
 ;
