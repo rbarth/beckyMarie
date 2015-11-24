@@ -16,6 +16,7 @@ footer
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
+  background-image: linear-gradient(-180deg, #9D969E 4%, #FCF7FD 100%);
   svg
   {
     width:34px;
@@ -24,8 +25,12 @@ footer
         fill: #35063d;
     }
   }
-  // opacity: 0.89;
-  background-image: linear-gradient(-180deg, #9D969E 4%, #FCF7FD 100%);
+
+  @media screen and (max-width:1000px)
+  {
+    height: 100px;
+    border-top: 1px solid darken($background-color, 10%);
+  }
 }
 
 /**
@@ -127,6 +132,33 @@ nav > li:first-child
   margin: auto;
   width: 70%;
   margin-top:60px;
+  // margin-bottom: 60px;
+}
+
+#colIcons
+{
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(justify);
+  margin:30px;
+  margin-left:60px;
+  margin-right:60px;
+
+  @media screen and (max-width:1000px)
+  {
+    // display: none;
+  }
+
+}
+
+#computerIcon, #artIcon
+{
+  @include flex(1);
+}
+#bookIcon
+{
+@include flex(2);
 }
 
 #columns
@@ -135,6 +167,13 @@ nav > li:first-child
   @include flex-direction(row);
   @include justify-content(justify);
   margin:30px;
+  margin-bottom: 60px;
+
+  @media screen and (max-width:1000px)
+  {
+    @include flex-direction(column);
+    margin: 0;
+  }
 }
 
 #col1, #col3{
@@ -145,6 +184,13 @@ nav > li:first-child
   // flex: 1;
   @include flex(1);
   color: white;
+
+  @media screen and (max-width:1000px)
+  {
+    margin: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 #col2
@@ -153,6 +199,14 @@ nav > li:first-child
   // flex: 2;
   padding: 30px;
   border: 3px solid #9D969E;
+
+  @media screen and (max-width:1000px)
+  {
+    border: none;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
 }
 
 h1
