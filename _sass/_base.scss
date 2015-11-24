@@ -10,7 +10,23 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+footer
+{
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(flex-end);
+  svg
+  {
+    width:34px;
+    fill: $brand-color;
+    &:hover {
+        fill: #35063d;
+    }
+  }
+  // opacity: 0.89;
+  background-image: linear-gradient(-180deg, #9D969E 4%, #FCF7FD 100%);
+}
 
 /**
  * Links
@@ -37,12 +53,12 @@ color: $brand-color;
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
-  opacity: 0.89;
+  // opacity: 0.89;
   background-image: linear-gradient(-180deg, #9D969E 4%, #FCF7FD 100%);
 
 }
 
-nav > li
+li
 {
   margin-left: 30px;
   margin-top:10px;
@@ -100,6 +116,45 @@ nav > li:first-child
   position:fixed;
 }
 
+#home2
+{
+  // margin: 30px;
+}
+
+#intro{
+  text-align: center;
+  font-size: 20px;
+  margin: auto;
+  width: 70%;
+  margin-top:60px;
+}
+
+#columns
+{
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(justify);
+  margin:30px;
+}
+
+#col1, #col3{
+  background: #9D969E;
+  padding: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  // flex: 1;
+  @include flex(1);
+  color: white;
+}
+
+#col2
+{
+  @include flex(2);
+  // flex: 2;
+  padding: 30px;
+  border: 3px solid #9D969E;
+}
+
 h1
 {
   // font-family: $header-font;
@@ -114,11 +169,7 @@ h2
   color: $brand-color;
 }
 
-// svg
-// {
-//   width: 20px;
-//   fill: white;
-// }
+
 
 
 /**
