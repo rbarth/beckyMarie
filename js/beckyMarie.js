@@ -6,7 +6,8 @@ $(function() {
 
       $('#home').css({
           width: $(window).width(),
-          height: $(window).height() - $('nav').height()
+          // height: $(window).height() - $('nav').height()
+          height: $(window).height()
         });
     }
 

@@ -5,7 +5,14 @@
 @import "bourbon/bourbon";
 
 // Our variables
-$header-font: "Imprint MT Shadow", Times, sans-serif;
+// $header-font: "Imprint MT Shadow", Times, sans-serif;
+$header-font: "BaskOldFace";
+
+$header-font: "LucidaBright-Demi";
+
+ // $header-font: "Times";
+
+
 $font-size:   16px;
 
 $spacing-unit:     30px;
@@ -13,6 +20,9 @@ $spacing-unit:     30px;
 $text-color:       white;
 $background-color: #9D969E;
 $brand-color:      #210426;
+$tan:              #ABA491;
+$bluegrey:         #5B6B66;
+$lightpurple:      #866E8A;
 $brand-hover: lighten($brand-color, 1%);
 $brand-hover2: lighten($brand-color, 5%);
 

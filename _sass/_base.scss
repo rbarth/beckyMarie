@@ -16,13 +16,18 @@ footer
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
-  background-image: linear-gradient(-180deg, #9D969E 4%, #FCF7FD 100%);
+  background-image: linear-gradient(-180deg, $background-color 4%, #FCF7FD 100%);
   svg
   {
     width:34px;
-    fill: $brand-color;
+    fill: $lightpurple;
     &:hover {
-        fill: #35063d;
+        fill: #866E8A;
+    }
+
+    #mailIcon
+    {
+      fill: $lightpurple;
     }
   }
 
@@ -40,27 +45,37 @@ a {
     color: $brand-color;
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+    p:after {
+	     content: '';
+	     display: block;
+	     margin: auto;
+	     height: 2px;
+	     width: 0px;
+	     background: transparent;
+	     transition: width .5s ease, background-color .5s ease;
+     }
+     p:hover:after {
+	     width: 100%;
+	     background: $lightpurple;
+     }
 
-    &:hover {
-        color: $brand-hover;
-        text-decoration: underline;
-    }
 }
 
 nav{
-font-family: $header-font;
-font-size: 16px;
-color: $brand-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: $header-font;
+  font-size: 16px;
+  color: $brand-color;
   @include display(flex);
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
-  // opacity: 0.89;
-  background-image: linear-gradient(-180deg, #9D969E 4%, #FCF7FD 100%);
-
+  // background-image: url("/images/gradient.svg");
+  background: rgba(white, 0.2);
+  border-bottom: 3px double rgba(white, 0.2);
 }
 
 li
@@ -81,21 +96,19 @@ nav > li:first-child
 #mailIcon
 {
   width:34px;
-  fill: $brand-color;
   margin-right: 30px;
 
   &:hover {
-      fill: #35063d;
+      fill: $lightpurple;
   }
 
 }
 
 
-
 #logo
 {
-  width:83px;
-  height:46px;
+  width:59px;
+  height:39px;
 
   #logoColor
   {
@@ -109,7 +122,7 @@ nav > li:first-child
   @include flex-direction(column);
   @include align-items(center);
   @include justify-content(center);
-  background-image: url("/images/GRSkyline2.png");
+  background-image: url("/images/GRSkyline.png");
   background-size: cover;
   background-attachment: fixed;
   // -webkit-background-size: cover;
@@ -119,6 +132,7 @@ nav > li:first-child
 
 #titleBox{
   position:fixed;
+  color: white;
 }
 
 #home2
@@ -152,13 +166,33 @@ nav > li:first-child
 
 }
 
-#computerIcon, #artIcon
+#computerIcon
 {
   @include flex(1);
+  stroke: $lightpurple;
+  fill: white;
 }
+
+#artIcon
+{
+  @include flex(1);
+  fill: white;
+  stroke: $lightpurple;
+
+  #pencil
+  {
+    fill: $lightpurple;
+    stroke: white;
+  }
+}
+
 #bookIcon
 {
 @include flex(2);
+fill: white;
+
+stroke: $brand-color;
+stroke: $lightpurple;
 }
 
 #columns
@@ -177,7 +211,7 @@ nav > li:first-child
 }
 
 #col1, #col3{
-  background: #9D969E;
+  background: $background-color;
   padding: 30px;
   margin-left: 30px;
   margin-right: 30px;
@@ -198,7 +232,7 @@ nav > li:first-child
   @include flex(2);
   // flex: 2;
   padding: 30px;
-  border: 3px solid #9D969E;
+  border: 3px solid $background-color;
 
   @media screen and (max-width:1000px)
   {
@@ -211,15 +245,16 @@ nav > li:first-child
 
 h1
 {
-  // font-family: $header-font;
-  // font-size: 96px;
-  // color: $brand-color;
+  font-family: $header-font;
+  font-size: 96px;
+  color: $brand-color;
 }
 
 h2
 {
   font-family: $header-font;
   font-size: 48px;
+  font-weight:900;
   color: $brand-color;
 }
 
