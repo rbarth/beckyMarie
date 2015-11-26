@@ -3,63 +3,124 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
+body, footer, nav, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
 
+//--------------------General--------------------//
+
+body{
+  font-family: $font;
+  font-size: 16px;
+}
+
+a {
+    color: inherit;;
+    text-decoration: none;
+}
+
+
+main
+{
+
+  a{
+    font-weight:600;
+    // font-style: italic;
+  }
+
+  a:hover{
+  text-decoration: underline;
+  }
+}
+
+
+
+
+li
+{
+  margin-left: 30px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+
+
+h1
+{
+  font-family: $header-font;
+  font-size: $h1-size;
+  color: $brand-color;
+}
+
+h2
+{
+  font-family: $header-font;
+  font-size: $h2-size;
+  font-weight:900;
+  color: $brand-color;
+}
+
+h4
+{
+  color: $lightpurple;
+
+}
+
+
+
+//--------------------Footer--------------------//
+
 footer
 {
   @include display(flex);
   @include flex-direction(row);
   @include align-items(center);
-  @include justify-content(flex-end);
-  background-image: linear-gradient(-180deg, $background-color 4%, #FCF7FD 100%);
+  @include justify-content(space-between);
+  @include flex-wrap(wrap);
+  padding-left: 60px;
+  padding-right: 60px;
+  background: rgba($background-color, 1);
+  color: white;
+  font-size: 12px;
+  border-top: 3px double rgba(white, 0.2);
+
   svg
   {
     width:34px;
-    fill: $lightpurple;
+    fill: white;
     &:hover {
-        fill: #866E8A;
-    }
-
-    #mailIcon
-    {
-      fill: $lightpurple;
+        fill: $lightpurple;
     }
   }
 
+  //for small screens
   @media screen and (max-width:1000px)
   {
-    height: 100px;
-    border-top: 1px solid darken($background-color, 10%);
+    background: rgba($background-color, .8);
+    padding-left: 10px;
+    padding-right: 10px;
+    @include justify-content(center);
+
   }
 }
 
-/**
- * Links
- */
-a {
-    color: $brand-color;
-    text-decoration: none;
-
-    p:after {
-	     content: '';
-	     display: block;
-	     margin: auto;
-	     height: 2px;
-	     width: 0px;
-	     background: transparent;
-	     transition: width .5s ease, background-color .5s ease;
-     }
-     p:hover:after {
-	     width: 100%;
-	     background: $lightpurple;
-     }
-
+//on large screens
+@media screen and (min-width:1000px)
+{
+  footer > li:last-child
+  {
+    margin-left: auto;
+    margin-right: 30px;
+    // border-right: 2px solid $brand-color;
+  }
 }
+
+
+//--------------------Navbar--------------------//
 
 nav{
   position: absolute;
@@ -73,37 +134,44 @@ nav{
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
-  // background-image: url("/images/gradient.svg");
   background: rgba(white, 0.2);
   border-bottom: 3px double rgba(white, 0.2);
-}
 
-li
-{
-  margin-left: 30px;
-  margin-top:10px;
-  margin-bottom: 10px;
-  list-style-type: none;
-  // display: inline-block;
-  // @include flex(1);
-}
+  #mailIcon
+  {
+    width:34px;
+    margin-right: 30px;
+
+    &:hover {
+        fill: $lightpurple;
+    }
+  }
+
+  a
+  {
+    p:after {
+      content: '';
+  	  display: block;
+  	  margin: auto;
+  	  height: 2px;
+  	  width: 0px;
+  	  background: transparent;
+  	  transition: width .5s ease, background-color .5s ease;
+       }
+
+    p:hover:after {
+  	   width: 100%;
+  	   background: $lightpurple;
+       }
+     }
+
+  }
+
 
 nav > li:first-child
 {
   margin-right: auto;
 }
-
-#mailIcon
-{
-  width:34px;
-  margin-right: 30px;
-
-  &:hover {
-      fill: $lightpurple;
-  }
-
-}
-
 
 #logo
 {
@@ -114,8 +182,10 @@ nav > li:first-child
   {
     fill: $brand-color;
   }
-
 }
+
+
+//--------------------Home Above--------------------//
 
 #home{
   @include display(flex);
@@ -125,15 +195,23 @@ nav > li:first-child
   background-image: url("/images/GRSkyline.png");
   background-size: cover;
   background-attachment: fixed;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
+
+  @media screen and (max-width:700px){
+    h1{
+      font-size: $h1-size - ($h1-size * .25);
+    }
+    h2{
+      font-size: $h2-size - ($h2-size * .25);
+    }
+  }
+  @media screen and (max-width:515px){
+    h1, h2{
+      text-align: center;
+    }
+  }
 }
 
-#titleBox{
-  position:fixed;
-  color: white;
-}
+//--------------------Home Below--------------------//
 
 #home2
 {
@@ -159,11 +237,6 @@ nav > li:first-child
   margin-left:60px;
   margin-right:60px;
 
-  @media screen and (max-width:1000px)
-  {
-    // display: none;
-  }
-
 }
 
 #computerIcon
@@ -188,7 +261,7 @@ nav > li:first-child
 
 #bookIcon
 {
-@include flex(2);
+@include flex(1.5);
 fill: white;
 
 stroke: $brand-color;
@@ -203,6 +276,10 @@ stroke: $lightpurple;
   margin:30px;
   margin-bottom: 60px;
 
+  p{
+    text-indent: 20px;
+  }
+
   @media screen and (max-width:1000px)
   {
     @include flex-direction(column);
@@ -215,7 +292,6 @@ stroke: $lightpurple;
   padding: 30px;
   margin-left: 30px;
   margin-right: 30px;
-  // flex: 1;
   @include flex(1);
   color: white;
 
@@ -229,8 +305,7 @@ stroke: $lightpurple;
 
 #col2
 {
-  @include flex(2);
-  // flex: 2;
+  @include flex(1.5);
   padding: 30px;
   border: 3px solid $background-color;
 
@@ -243,43 +318,16 @@ stroke: $lightpurple;
 
 }
 
-h1
-{
-  font-family: $header-font;
-  font-size: 96px;
-  color: $brand-color;
-}
 
-h2
+#arrow
 {
-  font-family: $header-font;
-  font-size: 48px;
-  font-weight:900;
-  color: $brand-color;
+	padding-right: 15px;
+	width: 70px;
 }
 
 
 
 
-/**
- * Wrapper
- */
-// .wrapper {
-//     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-//     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-//     margin-right: auto;
-//     margin-left: auto;
-//     padding-right: $spacing-unit;
-//     padding-left: $spacing-unit;
-//     @extend %clearfix;
-//
-//     // @include media-query($on-laptop) {
-//     //     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-//     //     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-//     //     padding-right: $spacing-unit / 2;
-//     //     padding-left: $spacing-unit / 2;
-//   //  }
-// }
 
 
 

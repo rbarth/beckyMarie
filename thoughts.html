@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<ul id="thoughtsContent">
+  {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+
+      <h2>
+        <a class="postTitle" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      {{ post.excerpt }}
+    </br></br>
+    </li>
+  {% endfor %}
+</ul>

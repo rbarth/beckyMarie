@@ -5,17 +5,17 @@
 @import "bourbon/bourbon";
 
 // Our variables
-// $header-font: "Imprint MT Shadow", Times, sans-serif;
-$header-font: "BaskOldFace";
+// $header-font: "Imprint MT Shadow", Times, serif;
+// $header-font: "BaskOldFace";
 
 $header-font: "LucidaBright-Demi";
+$font:        "AvenirNext-Regular", sans-serif;
 
- // $header-font: "Times";
 
-
-$font-size:   16px;
-
-$spacing-unit:     30px;
+$h1-size:         96px;
+$h2-size:         48px;
+$font-size:       16px;
+$spacing-unit:    30px;
 
 $text-color:       white;
 $background-color: #9D969E;
