@@ -1,13 +1,10 @@
 $(document).ready(function(){
 
-//alert($(window).width());
-
-
 $(function() {
 
     function abso() {
 
-      $('#home').css({
+      $('.fullBoth').css({
           width: $(window).width(),
           height: $(window).height()
         });
@@ -20,7 +17,25 @@ $(function() {
     abso();
   });
 
+  $(function() {
 
+    var mainH = $('main').height();
+    var windowH = $(window).height();
 
+      if (mainH < windowH)
+      {
+        function abso() {
 
+          $('main').css({
+              height: $(window).height()
+            });
+        }
+
+        $(window).resize(function() {
+            abso();
+          });
+
+        abso();
+      }
+    });
 });

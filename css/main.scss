@@ -1,12 +1,9 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+
 ---
 @charset "utf-8";
 @import "bourbon/bourbon";
 
-// Our variables
-// $header-font: "Imprint MT Shadow", Times, serif;
-// $header-font: "BaskOldFace";
 
 $header-font: "LucidaBright-Demi";
 $font:        "AvenirNext-Regular", sans-serif;
@@ -14,41 +11,13 @@ $font:        "AvenirNext-Regular", sans-serif;
 
 $h1-size:         96px;
 $h2-size:         48px;
+$h3-size:         36px;
 $font-size:       16px;
-$spacing-unit:    30px;
 
-$text-color:       white;
 $background-color: #9D969E;
-$brand-color:      #210426;
-$tan:              #ABA491;
-$bluegrey:         #5B6B66;
+$brand-color:      #2E0536;
+$brand-color-dark: #290530;
 $lightpurple:      #866E8A;
-$brand-hover: lighten($brand-color, 1%);
-$brand-hover2: lighten($brand-color, 5%);
-
-// $grey-color:       #828282;
-// $grey-color-light: lighten($grey-color, 40%);
-// $grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-// $content-width:    800px;
-// $on-palm:          600px;
-// $on-laptop:        800px;
-//
-// @mixin media-query($device) {
-//     @media screen and (max-width: $device) {
-//         @content;
-//     }
-// }
-// // Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-
-
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

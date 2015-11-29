@@ -1,17 +1,27 @@
 ---
 layout: default
 ---
+<main class="skylineBkg">
+  <div class="postsList">
+  <ul>
+    <h2>Thoughts</h2>
+    <br>
+    <hr />
+    <br>
+    <br>
+    {% for post in site.posts %}
+      <li>
+        <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+<br>
+        <h4>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h4>
+        <br>
 
-<ul id="thoughtsContent">
-  {% for post in site.posts %}
-    <li>
-      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-
-      <h2>
-        <a class="postTitle" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-      {{ post.excerpt }}
-    </br></br>
-    </li>
-  {% endfor %}
-</ul>
+        <p>{{ post.excerpt }}<p>
+      <br><br><br>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+</main>

@@ -25,7 +25,6 @@ a {
 
 main
 {
-
   a{
     font-weight:600;
     // font-style: italic;
@@ -37,23 +36,23 @@ main
 }
 
 
-
-
 li
+{
+    list-style-type: none;
+}
+
+footer > li, nav > li
 {
   margin-left: 30px;
   margin-top:10px;
   margin-bottom: 10px;
-  list-style-type: none;
 }
-
-
 
 h1
 {
   font-family: $header-font;
   font-size: $h1-size;
-  color: $brand-color;
+  color: $brand-color-dark;
 }
 
 h2
@@ -61,16 +60,24 @@ h2
   font-family: $header-font;
   font-size: $h2-size;
   font-weight:900;
-  color: $brand-color;
+  color: $brand-color-dark;
+}
+
+h3
+{
+  font-size: $h3-size;
+  font-weight: 600;
 }
 
 h4
 {
-  color: $lightpurple;
-
+  font-size: 1.17em;
 }
 
-
+strong
+{
+  color: $lightpurple;
+}
 
 //--------------------Footer--------------------//
 
@@ -83,7 +90,7 @@ footer
   @include flex-wrap(wrap);
   padding-left: 60px;
   padding-right: 60px;
-  background: rgba($background-color, 1);
+  background: $background-color;
   color: white;
   font-size: 12px;
   border-top: 3px double rgba(white, 0.2);
@@ -104,18 +111,16 @@ footer
     padding-left: 10px;
     padding-right: 10px;
     @include justify-content(center);
-
   }
 }
 
-//on large screens
+//on large screens only
 @media screen and (min-width:1000px)
 {
   footer > li:last-child
   {
     margin-left: auto;
     margin-right: 30px;
-    // border-right: 2px solid $brand-color;
   }
 }
 
@@ -123,7 +128,7 @@ footer
 //--------------------Navbar--------------------//
 
 nav{
-  position: absolute;
+  position:relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -134,19 +139,21 @@ nav{
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
-  background: rgba(white, 0.2);
+  background: rgba($background-color, 0.5);
   border-bottom: 3px double rgba(white, 0.2);
 
   #mailIcon
   {
     width:34px;
     margin-right: 30px;
+    fill: $brand-color;
 
     &:hover {
         fill: $lightpurple;
     }
   }
 
+  //for the on/off hover growing/shinking underline effect
   a
   {
     p:after {
@@ -192,9 +199,13 @@ nav > li:first-child
   @include flex-direction(column);
   @include align-items(center);
   @include justify-content(center);
-  background-image: url("/images/GRSkyline.png");
+  background-image: url("/images/GRSkylineBlur.png");
   background-size: cover;
   background-attachment: fixed;
+
+  nav{
+    position: absolute;
+  }
 
   @media screen and (max-width:700px){
     h1{
@@ -213,18 +224,12 @@ nav > li:first-child
 
 //--------------------Home Below--------------------//
 
-#home2
-{
-  // margin: 30px;
-}
-
 #intro{
   text-align: center;
   font-size: 20px;
   margin: auto;
   width: 70%;
   margin-top:60px;
-  // margin-bottom: 60px;
 }
 
 #colIcons
@@ -236,7 +241,6 @@ nav > li:first-child
   margin:30px;
   margin-left:60px;
   margin-right:60px;
-
 }
 
 #computerIcon
@@ -263,12 +267,10 @@ nav > li:first-child
 {
 @include flex(1.5);
 fill: white;
-
-stroke: $brand-color;
 stroke: $lightpurple;
 }
 
-#columns
+#columnsFlex
 {
   @include display(flex);
   @include flex-direction(row);
@@ -318,18 +320,63 @@ stroke: $lightpurple;
 
 }
 
+//--------------------Thoughts--------------------//
 
-#arrow
+.skylineBkg
 {
-	padding-right: 15px;
-	width: 70px;
+  background-image: url("/images/skylineBkg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
 }
 
+.postsList{
+  position: relative;
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  padding-top: 60px;
+  padding-bottom: 30px;
+  margin-left: 15%;
+  margin-right: 15%;
+
+  @media screen and (max-width:1000px)
+  {
+    h2
+    {
+      font-size: $h2-size - ($h2-size * .25);
+    }
+    h3
+    {
+      font-size: 28px;
+    }
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  h2,h3,h4,p,h1
+  {
+    text-align: center;
+  }
 
 
+  hr{
+    width: 70%;
+    margin-left: 15%;
+    border-top: 3px solid $background-color;
+    text-align: center;
+  }
+}
 
-
-
+.post
+{
+  @extend .postsList;
+  p
+  {
+    text-align: left;
+  }
+}
 
 /**
  * Clearfix
