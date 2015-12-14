@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "Driving Down Web Design Blvd"
+excerpt:
+---
+
+<br>
+<p>I started my journey with Dreamweaver in the driver's seat, then ditched Dreamweaver on the side of the road and went on for a while teaching myself how to drive from scratch. Until I finally picked up to two passengers: Bootstrap and Jekyll. Although, bootstrap was relegated to the backseat, where he is constantly arguing with me about what I can and cannot do!</p>
+
+<br>
+<br>
+
+[**Adobe Dreamweaver**](http://www.webdesigndev.com/10-good-and-10-bad-things-about-adobes-dreamweaver/)
+
+<br>
+<p>Adobe Dreamweaver is a web development tool for creating websites.</p>
+
+
+<br>
+
+Pros:  
+  -Provides templates with basic design layouts  
+  -Includes basic HTML writing help, such as code highlighting and auto completion options for tags  
+  -Includes basic file managing  
+  -Graphic User Interface makes writing the HTML and CSS easy, while also showing a semi-live version of the website  
+  -Will create all the basic javascript features, such as menu bars, for you  
+  -In fact, once you learn how to use the program, Dreamweaver will practically make the entire website for you  
+
+<br>
+
+Cons:  
+  -Poorly written, broad, and bulky javascript codes  
+  -Sole use of the Design View Interface can lead to confusing and unnecessary code  
+  -It is very, very expensive  
+  And most importantly  
+  -Dreamweaver will try to take control of your code by whispering promises of how easy web development could be, if you give in, it will wrap you around it's metaphorical finger and make you lazy. In other words, used incorrectly, it will turn you into a web developing zombie.  
+
+<br>
+
+Conclusion: Dreamweaver can be a very useful tool, the Design View which lets you see and edit your website in a semi-live form is particularly nice. However, while Dreamweaver offers many features that will essentially write the code for you, this sort of complacency has several negative side effects. In conclusion, Dreamweaver is a decent tool for a beginning developer, but should be used sparingly.
+
+<br>
+<br>
+
+**Bootstrap**
+
+<br>
+<br>
+
+**Jekyll**
