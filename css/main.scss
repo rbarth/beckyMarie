@@ -3,21 +3,30 @@
 ---
 @charset "utf-8";
 @import "bourbon/bourbon";
+@import url("//fonts.googleapis.com/css?family=Nunito:300,700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 
-
-$header-font: "LucidaBright-Demi";
-$font:        "AvenirNext-Regular", sans-serif;
-
+$header-font: "LucidaBright-Demi", serif;
+$font:        "Nunito", "AvenirNext-Regular", sans-serif;
 
 $h1-size:         96px;
 $h2-size:         48px;
 $h3-size:         36px;
 $font-size:       16px;
+$font-size-emp:   20px;
 
 $background-color: #9D969E;
 $brand-color:      #2E0536;
 $brand-color-dark: #290530;
 $lightpurple:      #866E8A;
+
+$mobile:           1000px;
+$mobileSmall:      480px;
+
+$spacing:          30px;
+$spacingx2:        $spacing * 2;
+
+$icon-width:       34px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

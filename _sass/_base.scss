@@ -14,11 +14,11 @@ dl, dd, ol, ul, figure {
 
 body{
   font-family: $font;
-  font-size: 16px;
+  font-size: $font-size;
 }
 
 a {
-    color: inherit;;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -43,7 +43,7 @@ li
 
 footer > li, nav > li
 {
-  margin-left: 30px;
+  margin-left: $spacing;
   margin-top:10px;
   margin-bottom: 10px;
 }
@@ -88,8 +88,8 @@ footer
   @include align-items(center);
   @include justify-content(space-between);
   @include flex-wrap(wrap);
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: $spacingx2;
+  padding-right: $spacingx2;
   background: $background-color;
   color: white;
   font-size: 12px;
@@ -97,30 +97,42 @@ footer
 
   svg
   {
-    width:34px;
+    width:$icon-width;
     fill: white;
     &:hover {
         fill: $lightpurple;
     }
   }
 
-  //for small screens
-  @media screen and (max-width:1000px)
-  {
-    background: rgba($background-color, .8);
-    padding-left: 10px;
-    padding-right: 10px;
-    @include justify-content(center);
-  }
+  //for mobile screens (tabs and landscapes)
+                                                                                                                                                                                        @media screen and (max-width:$mobile)
+                                                                                                                                                                                        {
+                                                                                                                                                                                          background: rgba($background-color, .8);
+
+                                                                                                                                                                                          li:first-child
+                                                                                                                                                                                          {
+                                                                                                                                                                                            margin-left: 0px;
+                                                                                                                                                                                          }
+                                                                                                                                                                                          @include justify-content(center);
+                                                                                                                                                                                        }
+
+  //for mobile screens (phone portraits)
+  @media screen and (max-width:$mobileSmall)
+    {
+      li:last-child
+      {
+        margin-left: 0px;
+      }
+    }
 }
 
 //on large screens only
-@media screen and (min-width:1000px)
+@media screen and (min-width:$mobile)
 {
   footer > li:last-child
   {
     margin-left: auto;
-    margin-right: 30px;
+    margin-right: $spacing;
   }
 }
 
@@ -133,7 +145,7 @@ nav{
   left: 0;
   width: 100%;
   font-family: $header-font;
-  font-size: 16px;
+  font-size: $font-size;
   color: $brand-color;
   @include display(flex);
   @include flex-direction(row);
@@ -144,8 +156,8 @@ nav{
 
   #mailIcon
   {
-    width:34px;
-    margin-right: 30px;
+    width:$icon-width;
+    margin-right: $spacing;
     fill: $brand-color;
 
     &:hover {
@@ -171,6 +183,12 @@ nav{
   	   background: $lightpurple;
        }
      }
+
+//Make links larger for tablets
+@media screen and (max-width:$mobile) and (min-width:$mobileSmall)
+{
+    font-size: $font-size-emp;
+}
 
   }
 
@@ -199,7 +217,7 @@ nav > li:first-child
   @include flex-direction(column);
   @include align-items(center);
   @include justify-content(center);
-  background-image: url("/images/GRSkylineBlur.png");
+  background-image: url("/images/GRSkylineBlur.jpg");
   background-size: cover;
   background-attachment: fixed;
 
@@ -207,6 +225,16 @@ nav > li:first-child
     position: absolute;
   }
 
+
+
+  //fix mobile rendering of the bkg image
+
+@media screen and (max-width:1100px)
+{
+  background-attachment: scroll;
+}
+
+//change header text to be more responsive
   @media screen and (max-width:700px){
     h1{
       font-size: $h1-size - ($h1-size * .25);
@@ -215,6 +243,7 @@ nav > li:first-child
       font-size: $h2-size - ($h2-size * .25);
     }
   }
+
   @media screen and (max-width:515px){
     h1, h2{
       text-align: center;
@@ -226,10 +255,10 @@ nav > li:first-child
 
 #intro{
   text-align: center;
-  font-size: 20px;
+  font-size: $font-size-emp;
   margin: auto;
   width: 70%;
-  margin-top:60px;
+  margin-top:$spacingx2;
 }
 
 #colIcons
@@ -238,9 +267,9 @@ nav > li:first-child
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(justify);
-  margin:30px;
-  margin-left:60px;
-  margin-right:60px;
+  margin:$spacing;
+  margin-left:$spacingx2;
+  margin-right:$spacingx2;
 }
 
 #computerIcon
@@ -275,14 +304,14 @@ stroke: $lightpurple;
   @include display(flex);
   @include flex-direction(row);
   @include justify-content(justify);
-  margin:30px;
-  margin-bottom: 60px;
+  margin:$spacing;
+  margin-bottom: $spacingx2;
 
   p{
     text-indent: 20px;
   }
 
-  @media screen and (max-width:1000px)
+  @media screen and (max-width:$mobile)
   {
     @include flex-direction(column);
     margin: 0;
@@ -291,31 +320,31 @@ stroke: $lightpurple;
 
 #col1, #col3{
   background: $background-color;
-  padding: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
+  padding: $spacing;
+  margin-left: $spacing;
+  margin-right: $spacing;
   @include flex(1);
   color: white;
 
-  @media screen and (max-width:1000px)
+  @media screen and (max-width:$mobile)
   {
     margin: 0px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: $spacingx2;
+    padding-bottom: $spacingx2;
   }
 }
 
 #col2
 {
   @include flex(1.5);
-  padding: 30px;
+  padding: $spacing;
   border: 3px solid $background-color;
 
-  @media screen and (max-width:1000px)
+  @media screen and (max-width:$mobile)
   {
     border: none;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: $spacingx2;
+    padding-bottom: $spacingx2;
   }
 
 }
@@ -336,12 +365,13 @@ stroke: $lightpurple;
   @include flex-direction(column);
   @include align-items(center);
   @include justify-content(center);
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding-top: $spacingx2;
+  padding-bottom: $spacing;
   margin-left: 15%;
   margin-right: 15%;
 
-  @media screen and (max-width:1000px)
+  //for small screens
+  @media screen and (max-width:$mobile)
   {
     h2
     {
