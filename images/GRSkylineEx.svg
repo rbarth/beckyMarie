@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1114px" height="304px" viewBox="0 0 1114 304" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="4.24705038%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#9D969E" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#9D969E" stop-opacity="0.5" offset="70%"></stop>
+            <stop stop-color="#9D969E" stop-opacity="1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="WorkBoard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-2" sketch:type="MSArtboardGroup" transform="translate(-156.000000, -316.000000)" fill="url(#linearGradient-1)">
+            <path d="M156,553 L156,432 L168,432 L168,418 L191,418 L191,407 L217,407 L217,400 L234,400 L234,418 L256,418 L256,431 L270,431 L270,532 L284,532 L284,542 L292,542 L292,303 L352,303 L352,504 L357,504 L357,536 L365,536 L365,478 L447,478 L447,505 L462,505 L462,435 L497,435 L497,429 L521,429 L521,496 L539,496 L539,482 L544,482 L544,496 L578,496 L578,524 C578,524 611,516 611,539 C611,543.158797 620,539 620,539 L620,518 L628,518 L628,513 L639,513 L639,518 L649,518 L649,529 L660,529 L660,539 L668,539 L668,469 L734,469 L734,520 L746,510 L751,520 L751,536 L769,536 L769,460 L779,460 L779,364 L854,392 L854,517 L857,480 L878,480 L878,467 C878,467 886.289914,448 895,448 C903.710086,448 913,467 913,467 L913,481 L913,516 L928,516 L928,424 L931,420 L931,408 C931,408 984,408 991,415 L991,422 L997,423 L997,544 L1000,528 L1004,528 L1004,507 L1042,507 L1042,500 L1053,500 L1053,496 L1069,496 L1069,539 L1083,539 L1083,468 L1095,468 L1095,396 L1137,396 L1137,367 L1142,367 L1142,351 L1176,351 L1176,367 L1182,367 L1182,437 L1206,437 L1206,542 L1218,542 L1218,530 L1245,530 L1245,569 L1247,527 L1259,527 L1259,537 L1270,537 L1270,620 L156,619 L156,553 Z" id="Path-3" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

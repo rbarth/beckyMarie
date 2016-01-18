@@ -5,10 +5,15 @@ $(function() {
 
     function abso() {
 
-      $('.fullBoth').css({
+      $('.fullScreenHome').css({
           width: $(window).width(),
           height: $(window).height()
         });
+
+        $('.fullScreen').css({
+            width: $(window).width(),
+            height: $(window).height() - $('nav').height()
+          });
     }
 
     $(window).resize(function() {
