@@ -17,8 +17,10 @@ $font-size-emp:   20px;
 
 $background-color: #9D969E;
 $brand-color:      #2E0536;
+//46, 5, 54
 $brand-color-dark: #290530;
 $lightpurple:      #866E8A;
+//134, 110, 138
 
 $mobile:           1000px;
 $mobileSmall:      480px;
@@ -31,8 +33,6 @@ $icon-width:       34px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+        "base"
 
 ;

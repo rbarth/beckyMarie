@@ -84,6 +84,7 @@ strong
 footer
 {
   position: relative;
+  // bottom: 0;
   @include display(flex);
   @include flex-direction(row);
   @include align-items(center);
@@ -109,27 +110,47 @@ footer
   @media screen and (max-width:$mobile)
   {
     background: rgba($background-color, .8);
-    li:first-child
+    :first-child
     {
       margin-left: 0px;
     }
+    #credits
+    {
+      text-align: center;
+      padding-left: $spacing;
+    }
     @include justify-content(center);
+    @include align-items(center);
   }
 
   //for mobile screens (phone portraits)
   @media screen and (max-width:$mobileSmall)
     {
-      li:last-child
+      :last-child
       {
         margin-left: 0px;
       }
+
+      #credits
+      {
+        @include align-items(center);
+      }
+
     }
+}
+
+#credits
+{
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
 }
 
 //on large screens only
 @media screen and (min-width:$mobile)
 {
-  footer > li:last-child
+  footer > div:last-child
   {
     margin-left: auto;
     margin-right: $spacing;
@@ -365,6 +386,7 @@ stroke: $lightpurple;
   height: 200px;
   border-bottom: 3px solid $brand-color;
   padding-top: 120px;
+  margin-top: 30px;
 
 }
 
@@ -396,7 +418,7 @@ stroke: $lightpurple;
   {
     background: $background-color;
   }
-  padding-bottom: $spacingx2;
+  // padding-bottom: $spacingx2;
 
 }
 
@@ -416,11 +438,68 @@ stroke: $lightpurple;
   padding-right: 60px;
 }
 
-.screenshots
+
+
+.screenshot
 {
   width: 300px;
-  padding: 15px 0 15px 0;
-  border: 1px solid $background-color;
+  margin: 15px 15px 15px 15px;
+  border: 2px solid $brand-color-dark;
+
+
+
+}
+
+// .tint {
+// 	position: relative;
+// 	float: left;
+// 	cursor: pointer;
+//   margin: 15px 15px 15px 15px;
+//   border: 2px solid $brand-color-dark;
+// }
+//
+// .tint:before {
+// 	content: "";
+// 	display: block;
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+// 	background-color: rgba(157, 150, 158, .6);
+// }
+//
+// .tint:hover:before {
+// 	background: none;
+// }
+
+
+@media screen and (max-width:$mobile)
+{
+  .sites
+  {
+    @include flex-direction(column);
+  }
+  .siteDesc
+  {
+    padding-right: 0px;
+  }
+  .screenshotsGroup
+  {
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(center);
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width:700px)
+{
+  .screenshotsGroup
+  {
+    @include flex-direction(column);
+
+  }
 }
 
 
@@ -428,10 +507,11 @@ stroke: $lightpurple;
 
 .skylineBkg
 {
-  background-image: url("/images/skylineBkg.svg");
+  background-image: url("/images/GRskyline20.svg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
+  background-size:cover;
 }
 
 .postsList{
@@ -442,6 +522,10 @@ stroke: $lightpurple;
   @include justify-content(center);
   padding-top: $spacingx2;
   padding-bottom: $spacing;
+  padding-left: $spacing;
+  padding-right: $spacing;
+  // background-color: rgba(157, 150, 158, .2);
+  border-radius: 30px;
   margin-left: 15%;
   margin-right: 15%;
 

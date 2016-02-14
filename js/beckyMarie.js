@@ -10,10 +10,10 @@ $(function() {
           height: $(window).height()
         });
 
-        $('.fullScreen').css({
-            width: $(window).width(),
-            height: $(window).height() - $('nav').height()
-          });
+        // $('.fullScreen').css({
+        //     width: $(window).width(),
+        //     height: $(window).height() - $('nav').height() - $('#portfolioHeader').height()
+        //   });
     }
 
     $(window).resize(function() {
