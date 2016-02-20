@@ -41,7 +41,7 @@ li
     list-style-type: none;
 }
 
-footer > li, nav > li
+footer > #footerLinks > li, nav > li
 {
   margin-left: $spacing;
   margin-top:10px;
@@ -89,9 +89,10 @@ footer
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(space-between);
-  @include flex-wrap(wrap);
-  padding-left: $spacingx2;
-  padding-right: $spacingx2;
+  // @include flex-wrap(wrap);
+  // padding-left: $spacing;
+  // padding-right: $spacing;
+  padding: 0px $spacing 0px $spacing;
   background: $background-color;
   color: white;
   font-size: 12px;
@@ -106,44 +107,60 @@ footer
     }
   }
 
-  //for mobile screens (tabs and landscapes)
+  //for mobile screens (tablets and landscapes)
   @media screen and (max-width:$mobile)
   {
     background: rgba($background-color, .8);
-    :first-child
-    {
-      margin-left: 0px;
-    }
+    // :first-child
+    // {
+    //   margin-left: 0px;
+    // }
+
     #credits
     {
       text-align: center;
       padding-left: $spacing;
+      padding-right: $spacing;
     }
-    @include justify-content(center);
-    @include align-items(center);
+    // @include justify-content(center);
+    // @include align-items(center);
   }
 
   //for mobile screens (phone portraits)
   @media screen and (max-width:$mobileSmall)
     {
-      :last-child
+      @include flex-direction(column);
+      #footerLinks
       {
-        margin-left: 0px;
+        padding-right: $spacing;
       }
+      // :last-child
+      // {
+      //   margin-left: 0px;
+      // }
 
       #credits
       {
         @include align-items(center);
+        padding-bottom: 10px;
       }
 
     }
+}
+
+#footerLinks
+{
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(space-between);
 }
 
 #credits
 {
   @include display(flex);
   @include flex-direction(column);
-  @include align-items(flex-start);
+  @include align-items(center);
   @include justify-content(center);
 }
 
@@ -167,19 +184,19 @@ nav{
   width: 100%;
   font-family: $header-font;
   font-size: $font-size;
-  color: $brand-color;
+  color: #fff;
   @include display(flex);
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
-  background: rgba($background-color, 0.5);
+  background: rgba($background-color, 1);
   border-bottom: 3px double rgba(white, 0.2);
 
   #mailIcon
   {
     width:$icon-width;
     margin-right: $spacing;
-    fill: $brand-color;
+    fill: #fff;
 
     &:hover {
         fill: $lightpurple;
@@ -212,6 +229,12 @@ nav{
 }
 
   }
+
+#navbarHome
+{
+  @extend nav;
+  background: rgba($background-color, .5);
+}
 
 
 nav > li:first-child
@@ -445,9 +468,11 @@ stroke: $lightpurple;
   width: 300px;
   margin: 15px 15px 15px 15px;
   border: 2px solid $brand-color-dark;
+}
 
-
-
+#pineLakeB
+{
+  height: 200px;
 }
 
 // .tint {
