@@ -52,7 +52,7 @@ h1
 {
   font-family: $header-font;
   font-size: $h1-size;
-  color: $brand-color-dark;
+  color: $darker-purple;
 }
 
 h2
@@ -60,23 +60,25 @@ h2
   font-family: $header-font;
   font-size: $h2-size;
   font-weight:900;
-  color: $brand-color-dark;
+  color: $darker-purple;
 }
 
 h3
 {
+  font-family: $header-font;
   font-size: $h3-size;
   font-weight: 600;
+  color: $darker-purple;
 }
 
 h4
 {
-  font-size: 20px;
+  font-size: $h4-size;
 }
 
 strong
 {
-  color: $lightpurple;
+  color: $dark-purple;
 }
 
 //--------------------Footer--------------------//
@@ -103,14 +105,14 @@ footer
     width:$icon-width;
     fill: white;
     &:hover {
-        fill: $lightpurple;
+        fill: $dark-purple;
     }
   }
 
   //for mobile screens (tablets and landscapes)
   @media screen and (max-width:$mobile)
   {
-    background: rgba($background-color, .8);
+    // background: rgba($background-color, .8);
     // :first-child
     // {
     //   margin-left: 0px;
@@ -184,26 +186,28 @@ nav{
   width: 100%;
   font-family: $header-font;
   font-size: $font-size;
-  color: #fff;
+  color: $darker-purple;
   @include display(flex);
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
-  background: rgba($background-color, 1);
+  background: $background-color;
   border-bottom: 3px double rgba(white, 0.2);
 
   #mailIcon
   {
     width:$icon-width;
     margin-right: $spacing;
-    fill: #fff;
+    fill: $darker-purple;
 
     &:hover {
-        fill: $lightpurple;
+        fill: #fff;
     }
   }
 
-  //for the on/off hover growing/shinking underline effect
+  //for the on/off hover growing/shinking underline effect on desktops only
+  @media screen and (min-width:$mobile)
+  {
   a
   {
     p:after {
@@ -218,17 +222,18 @@ nav{
 
     p:hover:after {
   	   width: 100%;
-  	   background: $lightpurple;
+  	   background: #fff;
        }
      }
+   }
 
 //Make links larger for tablets
-@media screen and (max-width:$mobile) and (min-width:$mobileSmall)
-{
-    font-size: $font-size-emp;
-}
+// @media screen and (max-width:$mobile) and (min-width:$mobileSmall)
+// {
+//     font-size: $font-size-emp;
+// }
 
-  }
+}
 
 #navbarHome
 {
@@ -249,7 +254,7 @@ nav > li:first-child
 
   #logoColor
   {
-    fill: $brand-color;
+    fill: $darker-purple;
   }
 }
 
@@ -299,7 +304,7 @@ nav > li:first-child
 
 #intro{
   text-align: center;
-  font-size: $font-size-emp;
+  font-size: $h4-size;
   margin: auto;
   width: 70%;
   margin-top:$spacingx2;
@@ -319,7 +324,8 @@ nav > li:first-child
 #computerIcon
 {
   @include flex(1);
-  stroke: $lightpurple;
+  stroke: $dark-purple;
+  stroke-width: 2px;
   fill: white;
 }
 
@@ -327,11 +333,11 @@ nav > li:first-child
 {
   @include flex(1);
   fill: white;
-  stroke: $lightpurple;
+  stroke: $dark-purple;
 
   #pencil
   {
-    fill: $lightpurple;
+    fill: $dark-purple;
     stroke: white;
   }
 }
@@ -340,7 +346,7 @@ nav > li:first-child
 {
 @include flex(1.5);
 fill: white;
-stroke: $lightpurple;
+stroke: $dark-purple;
 }
 
 #columnsFlex
@@ -407,7 +413,7 @@ stroke: $lightpurple;
   // background-attachment:fixed;
   background-size:cover;
   height: 200px;
-  border-bottom: 3px solid $brand-color;
+  border-bottom: 3px solid $dark-purple;
   padding-top: 120px;
   margin-top: 30px;
 
@@ -424,7 +430,7 @@ stroke: $lightpurple;
 // {
 //   width: 100%;
 //   height: 200px;
-//   fill: $brand-color;
+//   fill: $dark-purple;
 //   position: fixed;
 //   right: 0px;
 // }
@@ -447,18 +453,26 @@ stroke: $lightpurple;
 
 .sites
 {
-
   padding: 60px;
-
   @include display(flex);
   @include flex-direction(row);
   @include align-items(center);
-  @include justify-content(flex-start);
+  // @include justify-content(space-between);
 }
 
 .siteDesc
 {
+  @include flex(2);
   padding-right: 60px;
+}
+
+.screenshotsGroup
+{
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include flex(1);
+  margin: 0px;
 }
 
 
@@ -466,21 +480,23 @@ stroke: $lightpurple;
 .screenshot
 {
   width: 300px;
-  margin: 15px 15px 15px 15px;
-  border: 2px solid $brand-color-dark;
+  margin: 15px 0px 15px 15px;
+  border: 2px solid $darker-purple;
+
+
 }
 
-#pineLakeB
-{
-  height: 200px;
-}
+// #pineLakeB
+// {
+//   height: 200px;
+// }
 
 // .tint {
 // 	position: relative;
 // 	float: left;
 // 	cursor: pointer;
 //   margin: 15px 15px 15px 15px;
-//   border: 2px solid $brand-color-dark;
+//   border: 2px solid $darker-purple;
 // }
 //
 // .tint:before {
@@ -514,7 +530,8 @@ stroke: $lightpurple;
     @include display(flex);
     @include flex-direction(row);
     @include align-items(center);
-    margin-top: 30px;
+    // @include flex(3);
+    margin-top: 60px;
   }
 }
 
@@ -523,16 +540,20 @@ stroke: $lightpurple;
   .screenshotsGroup
   {
     @include flex-direction(column);
-
+  }
+  .screenshot
+  {
+    width: 200px;
   }
 }
+
 
 
 //--------------------Thoughts--------------------//
 
 .skylineBkg
 {
-  background-image: url("/images/GRskyline20.svg");
+  background-image: url("/images/GRSkyline20.svg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
