@@ -12,4 +12,4 @@ excerpt:
 
 <br>
 
-<p>As I am just starting out in web design and development, I don't as of yet have any ideas that will revolutionize the industry, but when I do develop any interesting insights into the world of web d&d, I will be sure to share them. In the mean time, please enjoy my irregular blogs.</p>
+<p>As I am just starting out in web design and development, I don't as of yet have any ideas that will revolutionize the industry, but when I do develop any interesting insights into the world of web d&d, I will be sure to share them. In the mean time, please enjoy the various subjects discussed in my random blog posts.</p>
