@@ -3,13 +3,8 @@ layout: post
 title:  "Blogging for Dummies"
 excerpt:
 ---
-<br>
  <p>I always wanted to start a blog, I love to write and have very little opportunity to do so after high school since I had tested out of my college english courses (yes, I was one of those weird people in class who actually liked writing essays!). But I didn't know how to find a good blogging site and start a blog and so I just kept putting it off. And then I started building my website and could just add my own blogging page. And suddenly I was faced with my largest obstacle yet. What was I going to blog about?</p>
 
-<br>
-
  <p>So when I had the page designed and built and ready for some content, I sat and waited for inspiration to strike. I spun around in my chair a few times, doodled on a piece of scrap paper, and then went and made a frappe. Ten minutes and a burst of caffeine-induced energy later, I sat back down at my desk and thought about what exactly I wanted out of this blog. Why do people blog? To make their ideas, thoughts, and opinions heard.</p>
-
-<br>
 
 <p>As I am just starting out in web design and development, I don't as of yet have any ideas that will revolutionize the industry, but when I do develop any interesting insights into the world of web d&d, I will be sure to share them. In the mean time, please enjoy the various subjects discussed in my random blog posts.</p>
