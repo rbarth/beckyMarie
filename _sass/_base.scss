@@ -191,19 +191,19 @@ nav{
   width: 100%;
   font-family: $header-font;
   font-size: $font-size;
-  color: $darkBrand;
+  color: $darker-purple;
   @include display(flex);
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
   background: $background-color;
-  border-bottom: 1px solid white;
+  border-bottom: 3px double rgba(#fff, 0.5);
 
   #mailIcon
   {
     width:$icon-width;
     margin-right: $spacing;
-    fill: $darkBrand;
+    fill: $darker-purple;
 
     &:hover {
         fill: #fff;
@@ -243,8 +243,7 @@ nav{
 #navbarHome
 {
   @extend nav;
-  //background: rgba($background-color, .9);
-  background: rgba(#fff, .4);
+  background: rgba($background-color, .9);
 }
 
 
@@ -313,7 +312,7 @@ nav > li:first-child
   @include flex-direction(column);
   @include align-items(center);
   @include justify-content(flex-end);
-  background-image: url("/images/lightHouse.jpg");
+  background-image: url("/images/GRSkyline.jpg");
   background-size: cover;
   background-attachment: fixed;
 
@@ -363,7 +362,7 @@ nav > li:first-child
 #computerIcon
 {
   @include flex(1);
-  stroke: $darkBrand;
+  stroke: $dark-purple;
   stroke-width: 2px;
   fill: white;
 }
@@ -372,11 +371,11 @@ nav > li:first-child
 {
   @include flex(1);
   fill: white;
-  stroke: $darkBrand;
+  stroke: $dark-purple;
 
   #pencil
   {
-    fill: $darkBrand;
+    fill: $dark-purple;
     stroke: white;
   }
 }
@@ -385,7 +384,7 @@ nav > li:first-child
 {
 @include flex(1.5);
 fill: white;
-stroke: $darkBrand;
+stroke: $dark-purple;
 }
 
 #columnsFlex
@@ -396,9 +395,9 @@ stroke: $darkBrand;
   margin:$spacing;
   margin-bottom: $spacingx2;
 
-  p{
-    text-indent: 20px;
-  }
+  // p{
+  //   text-indent: 20px;
+  // }
 
   @media screen and (max-width:$mobile)
   {
@@ -428,11 +427,6 @@ stroke: $darkBrand;
   @include flex(1.5);
   padding: $spacing;
   border: 3px solid $background-color;
-
-  h4
-  {
-    color: $darkBrand;
-  }
 
   @media screen and (max-width:$mobile)
   {
