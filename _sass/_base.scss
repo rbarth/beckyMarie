@@ -24,7 +24,7 @@ a {
 
 main
 {
-
+  // background-image: url("/images/GRSkyline.jpg");
   a{
     font-weight:600;
     // font-style: italic;
@@ -55,7 +55,8 @@ h1
 {
   font-family: $header-font;
   font-size: $h1-size;
-  color: $darker-purple;
+  // color: $darker-purple;
+  color: #fff;
 }
 
 h2
@@ -63,7 +64,8 @@ h2
   font-family: $header-font;
   font-size: $h2-size;
   font-weight:900;
-  color: $darker-purple;
+  // color: $darker-purple;
+  color: #fff;
 }
 
 h3
@@ -189,19 +191,19 @@ nav{
   width: 100%;
   font-family: $header-font;
   font-size: $font-size;
-  color: $darker-purple;
+  color: $darkBrand;
   @include display(flex);
   @include flex-direction(row);
   @include align-items(center);
   @include justify-content(flex-end);
   background: $background-color;
-  border-bottom: 3px double rgba(white, 0.2);
+  border-bottom: 1px solid white;
 
   #mailIcon
   {
     width:$icon-width;
     margin-right: $spacing;
-    fill: $darker-purple;
+    fill: $darkBrand;
 
     &:hover {
         fill: #fff;
@@ -241,7 +243,8 @@ nav{
 #navbarHome
 {
   @extend nav;
-  background: rgba($background-color, .5);
+  //background: rgba($background-color, .9);
+  background: rgba(#fff, .4);
 }
 
 
@@ -264,12 +267,53 @@ nav > li:first-child
 
 //--------------------Home Above--------------------//
 
+#homeTitle
+{
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(flex-end);
+  @include justify-content(center);
+
+  width: 100%;
+  border-top: 3px double rgba(#fff, 0.5);
+  background: rgba($background-color, .9);
+  // background: $background-color;
+
+  p
+  {
+    font-size: $h2-size;
+    color: #fff;
+    // display: inline-block;
+    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width:1030px)
+  {
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+  //change header text to be more responsive
+    @media screen and (max-width:700px){
+      h1{
+        font-size: $h1-size - ($h1-size * .35);
+      }
+      p{
+        font-size: $h2-size - ($h2-size * .25);
+      }
+    }
+}
+
 #home{
   @include display(flex);
   @include flex-direction(column);
   @include align-items(center);
-  @include justify-content(center);
-  background-image: url("/images/GRSkylineBlur.jpg");
+  @include justify-content(flex-end);
+  background-image: url("/images/lightHouse.jpg");
   background-size: cover;
   background-attachment: fixed;
 
@@ -286,15 +330,7 @@ nav > li:first-child
   background-attachment: scroll;
 }
 
-//change header text to be more responsive
-  @media screen and (max-width:700px){
-    h1{
-      font-size: $h1-size - ($h1-size * .25);
-    }
-    h2{
-      font-size: $h2-size - ($h2-size * .25);
-    }
-  }
+
 
   @media screen and (max-width:515px){
     h1, h2{
@@ -327,7 +363,7 @@ nav > li:first-child
 #computerIcon
 {
   @include flex(1);
-  stroke: $dark-purple;
+  stroke: $darkBrand;
   stroke-width: 2px;
   fill: white;
 }
@@ -336,11 +372,11 @@ nav > li:first-child
 {
   @include flex(1);
   fill: white;
-  stroke: $dark-purple;
+  stroke: $darkBrand;
 
   #pencil
   {
-    fill: $dark-purple;
+    fill: $darkBrand;
     stroke: white;
   }
 }
@@ -349,7 +385,7 @@ nav > li:first-child
 {
 @include flex(1.5);
 fill: white;
-stroke: $dark-purple;
+stroke: $darkBrand;
 }
 
 #columnsFlex
@@ -392,6 +428,11 @@ stroke: $dark-purple;
   @include flex(1.5);
   padding: $spacing;
   border: 3px solid $background-color;
+
+  h4
+  {
+    color: $darkBrand;
+  }
 
   @media screen and (max-width:$mobile)
   {
