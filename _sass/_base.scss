@@ -88,8 +88,8 @@ strong
 }
 
 hr{
-  width: 70%;
-  margin-left: 15%;
+  width: 60%;
+  // margin-left: 15%;
   border-top: 3px solid $lightBrand;
   text-align: center;
 }
@@ -314,11 +314,18 @@ header
 
 #intro{
   text-align: center;
-  font-size: $h4-size;
+  font-size: $h3-size;
   margin: auto;
-  width: 70%;
+  width: 50%;
   margin-top:$spacingx2;
+
+@media screen and (max-width:$mobileSmall)
+  {
+    font-size: $h4-size;
+  }
+
 }
+
 
 #rowContainer
 {
