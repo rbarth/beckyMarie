@@ -34,6 +34,12 @@ $(document).ready(function(){
           height: $(window).height() - $('header').height()
           // height: $(window).height() - $('nav').height() - $('header').height()
         });
+
+        $('#homeImageText').css({
+            height: $(window).height() - $('header').height()
+            // height: $(window).height() - $('nav').height() - $('header').height()
+          });
+
     }
 
     $(window).resize(function() {

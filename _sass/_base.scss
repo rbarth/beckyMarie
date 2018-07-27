@@ -108,9 +108,14 @@ nav{
   @include display(flex);
   @include flex-direction(row);
   @include align-items(center);
-  @include justify-content(flex-end);
-  background: $lightBrand;
-  border-bottom: 3px double rgba(#fff, 0.5);
+  @include justify-content(flex-start);
+  // background: $lightBrand;
+  // border-bottom: 3px double rgba(#fff, 0.5);
+
+  p
+  {
+    color: white;
+  }
 
   #mailIcon
   {
@@ -167,30 +172,23 @@ nav{
 }
 
 
-nav > li:first-child
-{
-  margin-right: auto;
-}
+// nav > li:first-child
+// {
+//   margin-right: auto;
+// }
 
 #logo
 {
-  width:59px;
-  height:39px;
+  width:40px;
+  // height:39px;
 
   #logoColor
   {
-    fill: $darkBrand;
+    fill: white;
   }
 }
 
-#socialIcons
-  {
-    width:$social-width;
-    fill: white;
-    &:hover {
-        fill: $darkBrand;
-    }
-  }
+
 
 
 //--------------------Home Above--------------------//
@@ -200,7 +198,7 @@ header
   // position:relative;
   // padding-top: 20px;
   // padding-bottom: 20px;
-  border-bottom: 7px solid $lightBrand;
+  // border-bottom: 7px solid $lightBrand;
   @include display(flex);
   @include flex-direction(column);
   @include align-items(center);
@@ -209,9 +207,10 @@ header
 
   h1 {
     margin: 10px 0 0;
+    color: $darkBrand;
   }
 
-  h4 {
+  p {
     margin: 10px 0 20px;
   }
 
@@ -255,7 +254,7 @@ header
 //     @include flex-direction(column);
 //     @include align-items(center);
 //   }
-//   //change header text to be more responsive
+
 //     @media screen and (max-width:700px){
 //       h1{
 //         font-size: $h1-size - ($h1-size * .35);
@@ -268,16 +267,62 @@ header
 
 #homeImage
 {
-    background-image: url("/images/GRSkyline.jpg");
+    background-image: url("/images/noteBook.jpg");
     background-size: cover;
     background-attachment: fixed;
     // border-bottom: 10px solid $lightBrand;
-    border-top: 10px solid $lightBrand;
-    @include display(flex);
-    @include flex-direction(column);
-    @include align-items(center);
-    @include justify-content(center);
+    // border-top: 10px solid $lightBrand;
+
+    @media screen and (max-width:$mobile)
+      {
+        background-image: url("/images/noteBookTablet.jpg");
+      }
+
+      @media screen and (max-width:$mobileSmall)
+        {
+          background-image: url("/images/noteBookPhone.jpg");
+        }
+
 }
+
+#homeImageText
+{
+  width: 50%;
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+
+  h1 {
+    margin: 0px 0 0 40px;
+    color: white;
+  }
+
+  h3 {
+    margin: 10px 0 20px 40px;
+    color: white;
+  }
+
+  @media screen and (max-width:$mobile)
+    {
+      width: 70%;
+    }
+
+    @media screen and (max-width:$mobileSmall)
+      {
+        h1
+        {
+          font-size: $h2-size;
+        }
+        h3
+        {
+          font-size: $font-size;
+        }
+        width: 100%;
+      }
+}
+
+
 
 // #home{
 //   @include display(flex);
@@ -332,7 +377,7 @@ header
   margin: 60px;
 
   svg, g{
-    stroke: $darkBrand;
+    stroke: $lightBrand;
     fill: white;
 
     // :hover
@@ -418,24 +463,40 @@ footer
   // padding-left: $spacing;
   // padding-right: $spacing;
   padding: 0px $spacing 0px $spacing;
-  background: $lightBrand;
-  color: white;
+  // background: $lightBrand;
+  color: $darkBrand;
   // font-size: 12px;
-  border-top: 3px double rgba(white, 0.2);
+  border-top: 3px solid $lightBrand;
 
-  svg, #linkedIn
+  svg
   {
     width:$icon-width;
-    fill: white;
+    fill: $lightBrand;
     &:hover {
         fill: $darkBrand;
     }
   }
 
-  a:hover
+  @media screen and (min-width:$mobile)
   {
-    text-decoration: underline;
-  }
+  a
+  {
+    p:after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 2px;
+      width: 0px;
+      background: transparent;
+      transition: width .5s ease, lightBrand .5s ease;
+       }
+
+    p:hover:after {
+       width: 100%;
+       background: #fff;
+       }
+     }
+   }
 
   //for mobile screens (tablets and landscapes)
   @media screen and (max-width:$mobile)
@@ -455,6 +516,15 @@ footer
     // @include justify-content(center);
     // @include align-items(center);
   }
+
+  #socialIcons
+    {
+      width:$social-width;
+      fill: $lightBrand;
+      &:hover {
+          fill: $darkBrand;
+      }
+    }
 
   //for mobile screens (phone portraits)
   @media screen and (max-width:$mobileSmall)
