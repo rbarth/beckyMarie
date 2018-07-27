@@ -200,7 +200,7 @@ header
   // position:relative;
   // padding-top: 20px;
   // padding-bottom: 20px;
-  // border-bottom: 7px solid $lightBrand;
+  border-bottom: 7px solid $lightBrand;
   @include display(flex);
   @include flex-direction(column);
   @include align-items(center);
