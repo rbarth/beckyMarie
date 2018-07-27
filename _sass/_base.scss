@@ -55,8 +55,7 @@ h1
 {
   font-family: $header-font;
   font-size: $h1-size;
-  // color: $darker-purple;
-  color: $dark-purple;
+  color: $darkBrand;
 }
 
 h2
@@ -64,7 +63,6 @@ h2
   font-family: $header-font;
   font-size: $h2-size;
   font-weight:900;
-  // color: $darker-purple;
   color: #fff;
 }
 
@@ -73,28 +71,331 @@ h3
   font-family: $header-font;
   font-size: $h3-size;
   font-weight: 600;
-  color: $darker-purple;
+  color: $darkBrand;
 }
 
 h4
 {
   font-family: $header-font;
   font-size: $h4-size;
-  color: $darker-purple;
+  color: $darkBrand;
 }
 
 
 strong
 {
-  color: $dark-purple;
+  color: $darkBrand;
 }
 
 hr{
   width: 70%;
   margin-left: 15%;
-  border-top: 3px solid $background-color;
+  border-top: 3px solid $lightBrand;
   text-align: center;
 }
+
+
+//--------------------Navbar--------------------//
+
+nav{
+  // position:relative;
+  // top: 0;
+  // left: 0;
+  width: 100%;
+  font-family: $header-font;
+  font-size: $font-size;
+  // color: $darkBrand;
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(flex-end);
+  background: $lightBrand;
+  border-bottom: 3px double rgba(#fff, 0.5);
+
+  #mailIcon
+  {
+    width:$icon-width;
+    margin-right: $spacing;
+    fill: #fff;
+
+    &:hover {
+        fill: $darkBrand;
+    }
+  }
+
+
+  //for the on/off hover growing/shinking underline effect on desktops only
+  @media screen and (min-width:$mobile)
+  {
+  a
+  {
+    p:after {
+      content: '';
+  	  display: block;
+  	  margin: auto;
+  	  height: 2px;
+  	  width: 0px;
+  	  background: transparent;
+  	  transition: width .5s ease, lightBrand .5s ease;
+       }
+
+    p:hover:after {
+  	   width: 100%;
+  	   background: #fff;
+       }
+     }
+   }
+
+   a
+   {
+     text-decoration: none;
+   }
+
+//Make links larger for tablets
+// @media screen and (max-width:$mobile) and (min-width:$mobileSmall)
+// {
+//     font-size: $font-size-emp;
+// }
+
+}
+
+
+#navbarHome
+{
+  @extend nav;
+  background: rgba($lightBrand, .9);
+}
+
+
+nav > li:first-child
+{
+  margin-right: auto;
+}
+
+#logo
+{
+  width:59px;
+  height:39px;
+
+  #logoColor
+  {
+    fill: $darkBrand;
+  }
+}
+
+#socialIcons
+  {
+    width:$social-width;
+    fill: white;
+    &:hover {
+        fill: $darkBrand;
+    }
+  }
+
+
+//--------------------Home Above--------------------//
+
+header
+{
+  // position:relative;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  // border-bottom: 7px solid $lightBrand;
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-wrap(wrap);
+
+  h1 {
+    margin: 10px 0 0;
+  }
+
+  h4 {
+    margin: 10px 0 20px;
+  }
+
+  @media screen and (max-width:700px){
+    h1{
+      font-size: $h1-size - ($h1-size * .35);
+    }
+    h4{
+      font-size: $h4-size - ($h4-size * .25);
+    }
+  }
+}
+
+// #homeTitle
+// {
+//   @include display(flex);
+//   @include flex-direction(row);
+//   @include align-items(flex-end);
+//   @include justify-content(center);
+//
+//   width: 100%;
+//   border-top: 3px double rgba(#fff, 0.5);
+//   background: rgba($lightBrand, .9);
+//   // background: $lightBrand;
+//
+//   p
+//   {
+//     font-size: $h2-size;
+//     color: #fff;
+//     // display: inline-block;
+//     padding-left: 20px;
+//     margin-top: 0px;
+//     margin-bottom: 5px;
+//   }
+//   h1 {
+//     margin-top: 0px;
+//     margin-bottom: 0px;
+//   }
+//   @media screen and (max-width:1030px)
+//   {
+//     @include flex-direction(column);
+//     @include align-items(center);
+//   }
+//   //change header text to be more responsive
+//     @media screen and (max-width:700px){
+//       h1{
+//         font-size: $h1-size - ($h1-size * .35);
+//       }
+//       p{
+//         font-size: $h2-size - ($h2-size * .25);
+//       }
+//     }
+// }
+
+#homeImage
+{
+    background-image: url("/images/GRSkyline.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    // border-bottom: 10px solid $lightBrand;
+    border-top: 10px solid $lightBrand;
+    @include display(flex);
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+}
+
+// #home{
+//   @include display(flex);
+//   @include flex-direction(column);
+//   @include align-items(center);
+//   @include justify-content(flex-end);
+//   background-image: url("/images/GRSkyline.jpg");
+//   background-size: cover;
+//   background-attachment: fixed;
+//
+//   nav{
+//     position: absolute;
+//   }
+//
+//
+//
+//   //fix mobile rendering of the bkg image
+//
+// @media screen and (max-width:1100px)
+// {
+//   background-attachment: scroll;
+// }
+//
+//
+//
+//   @media screen and (max-width:515px){
+//     h1, h2{
+//       text-align: center;
+//     }
+//   }
+// }
+
+//--------------------Home Below--------------------//
+
+#intro{
+  text-align: center;
+  font-size: $h4-size;
+  margin: auto;
+  width: 70%;
+  margin-top:$spacingx2;
+}
+
+#rowContainer
+{
+  margin: 60px;
+
+  svg, g{
+    stroke: $darkBrand;
+    fill: white;
+
+    // :hover
+    // {
+    //   stroke: $darkBrand;
+    //   fill: $darkBrand;
+    // }
+}
+
+a {
+  display: block;
+  width: 120px;
+  text-align: center;
+}
+}
+
+.homeRows
+{
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(center);
+    // @include justify-content(justify);
+    margin-bottom: 60px;
+
+
+    svg
+    {
+      width: 100px;
+      margin-left: 0px;
+      flex-shrink: 0;
+    }
+
+    p, h4
+    {
+      margin-left: 30px;
+      // margin-right: 15px;
+      // width: 90%;
+    }
+
+    #rowText
+    {
+      margin-left: 30px;
+    }
+
+      @media screen and (max-width:$mobile)
+        {
+          @include flex-direction(column);
+          p, h4
+          {
+            margin-left: 0px;
+            margin-right: 0px;
+          }
+
+          svg
+          {
+            // width: 100px;
+            margin-bottom: 30px;
+
+          }
+        }
+
+        @media screen and (max-width:$mobileSmall)
+          {
+            #rowText
+            {
+              margin-left: 0px;
+            }
+          }
+}
+
 
 //--------------------Footer--------------------//
 
@@ -110,9 +411,9 @@ footer
   // padding-left: $spacing;
   // padding-right: $spacing;
   padding: 0px $spacing 0px $spacing;
-  background: $background-color;
+  background: $lightBrand;
   color: white;
-  font-size: 12px;
+  // font-size: 12px;
   border-top: 3px double rgba(white, 0.2);
 
   svg, #linkedIn
@@ -120,14 +421,19 @@ footer
     width:$icon-width;
     fill: white;
     &:hover {
-        fill: $dark-purple;
+        fill: $darkBrand;
     }
+  }
+
+  a:hover
+  {
+    text-decoration: underline;
   }
 
   //for mobile screens (tablets and landscapes)
   @media screen and (max-width:$mobile)
   {
-    // background: rgba($background-color, .8);
+    // background: rgba($lightBrand, .8);
     // :first-child
     // {
     //   margin-left: 0px;
@@ -179,6 +485,7 @@ footer
   @include flex-direction(column);
   @include align-items(center);
   @include justify-content(center);
+  font-size: 12px;
 }
 
 //on large screens only
@@ -189,314 +496,6 @@ footer
     margin-left: auto;
     margin-right: $spacing;
   }
-}
-
-
-//--------------------Navbar--------------------//
-
-
-#socialIcons
-  {
-    width:$social-width;
-    fill: white;
-    &:hover {
-        fill: $dark-purple;
-    }
-  }
-
-nav{
-  // position:relative;
-  // top: 0;
-  // left: 0;
-  width: 100%;
-  font-family: $header-font;
-  font-size: $font-size;
-  color: $darker-purple;
-  @include display(flex);
-  @include flex-direction(row);
-  @include align-items(center);
-  @include justify-content(flex-end);
-  background: $background-color;
-  border-bottom: 3px double rgba(#fff, 0.5);
-
-  #mailIcon
-  {
-    width:$icon-width;
-    margin-right: $spacing;
-    fill: #fff;
-
-    &:hover {
-        fill: $dark-purple;
-    }
-  }
-
-
-  //for the on/off hover growing/shinking underline effect on desktops only
-  @media screen and (min-width:$mobile)
-  {
-  a
-  {
-    p:after {
-      content: '';
-  	  display: block;
-  	  margin: auto;
-  	  height: 2px;
-  	  width: 0px;
-  	  background: transparent;
-  	  transition: width .5s ease, background-color .5s ease;
-       }
-
-    p:hover:after {
-  	   width: 100%;
-  	   background: #fff;
-       }
-     }
-   }
-
-//Make links larger for tablets
-// @media screen and (max-width:$mobile) and (min-width:$mobileSmall)
-// {
-//     font-size: $font-size-emp;
-// }
-
-}
-
-
-#navbarHome
-{
-  @extend nav;
-  background: rgba($background-color, .9);
-}
-
-
-nav > li:first-child
-{
-  margin-right: auto;
-}
-
-#logo
-{
-  width:59px;
-  height:39px;
-
-  #logoColor
-  {
-    fill: $darker-purple;
-  }
-}
-
-
-//--------------------Home Above--------------------//
-
-header
-{
-  // position:relative;
-  // padding-top: 20px;
-  // padding-bottom: 20px;
-  @include display(flex);
-  @include flex-direction(column);
-  @include align-items(center);
-  @include justify-content(center);
-  @include flex-wrap(wrap);
-
-
-  @media screen and (max-width:700px){
-    h1{
-      font-size: $h1-size - ($h1-size * .35);
-    }
-    h4{
-      font-size: $h4-size - ($h4-size * .25);
-    }
-  }
-}
-
-// #homeTitle
-// {
-//   @include display(flex);
-//   @include flex-direction(row);
-//   @include align-items(flex-end);
-//   @include justify-content(center);
-//
-//   width: 100%;
-//   border-top: 3px double rgba(#fff, 0.5);
-//   background: rgba($background-color, .9);
-//   // background: $background-color;
-//
-//   p
-//   {
-//     font-size: $h2-size;
-//     color: #fff;
-//     // display: inline-block;
-//     padding-left: 20px;
-//     margin-top: 0px;
-//     margin-bottom: 5px;
-//   }
-//   h1 {
-//     margin-top: 0px;
-//     margin-bottom: 0px;
-//   }
-//   @media screen and (max-width:1030px)
-//   {
-//     @include flex-direction(column);
-//     @include align-items(center);
-//   }
-//   //change header text to be more responsive
-//     @media screen and (max-width:700px){
-//       h1{
-//         font-size: $h1-size - ($h1-size * .35);
-//       }
-//       p{
-//         font-size: $h2-size - ($h2-size * .25);
-//       }
-//     }
-// }
-
-#homeImage
-{
-    background-image: url("/images/lightHouse.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-// #home{
-//   @include display(flex);
-//   @include flex-direction(column);
-//   @include align-items(center);
-//   @include justify-content(flex-end);
-//   background-image: url("/images/GRSkyline.jpg");
-//   background-size: cover;
-//   background-attachment: fixed;
-//
-//   nav{
-//     position: absolute;
-//   }
-//
-//
-//
-//   //fix mobile rendering of the bkg image
-//
-// @media screen and (max-width:1100px)
-// {
-//   background-attachment: scroll;
-// }
-//
-//
-//
-//   @media screen and (max-width:515px){
-//     h1, h2{
-//       text-align: center;
-//     }
-//   }
-// }
-
-//--------------------Home Below--------------------//
-
-#intro{
-  text-align: center;
-  font-size: $h4-size;
-  margin: auto;
-  width: 70%;
-  margin-top:$spacingx2;
-}
-
-#rowContainer
-{
-  svg, g{
-    stroke: $dark-purple;
-    fill: white;
-
-    :hover
-    {
-      stroke: $dark-purple;
-      fill: $dark-purple;
-    }
-}
-
-a {
-  display: block;
-  width:120px;
-  text-align: center;
-}
-}
-
-
-
-#runner
-{
-  width: 61px;
-  height: 80px;
-}
-
-#apple
-{
-  width:83px;
-  height:84px;
-}
-
-#book
-{
-  width:84px;
-  height:42px;
-}
-
-#psi
-{
-  width:84px;
-  height:73px;
-}
-
-#cv
-{
-  width:84px;
-  height:58px;
-}
-
-
-#rowContainer
-{
-  margin: 60px;
-}
-
-.homeRows
-{
-
-    @include display(flex);
-    @include flex-direction(row);
-    @include align-items(center);
-    // @include justify-content(justify);
-    margin-bottom: 60px;
-
-
-    svg
-    {
-      width: 10%;
-      margin-left: 0px;
-    }
-
-    p, h4
-    {
-      margin-left: 30px;
-      margin-right: 15px;
-      width: 90%;
-    }
-
-      @media screen and (max-width:$mobile)
-        {
-          @include flex-direction(column);
-          p, h4
-          {
-            margin-left: 0px;
-            margin-right: 0px;
-          }
-
-          svg
-          {
-            width: 100px;
-            margin-bottom: 30px;
-          }
-        }
-
-
 }
 
 // #colIcons
@@ -513,7 +512,7 @@ a {
 // #computerIcon
 // {
 //   @include flex(1);
-//   stroke: $dark-purple;
+//   stroke: $darkBrand;
 //   stroke-width: 2px;
 //   fill: white;
 // }
@@ -522,11 +521,11 @@ a {
 // {
 //   @include flex(1);
 //   fill: white;
-//   stroke: $dark-purple;
+//   stroke: $darkBrand;
 //
 //   #pencil
 //   {
-//     fill: $dark-purple;
+//     fill: $darkBrand;
 //     stroke: white;
 //   }
 // }
@@ -535,7 +534,7 @@ a {
 // {
 // @include flex(1.5);
 // fill: white;
-// stroke: $dark-purple;
+// stroke: $darkBrand;
 // }
 //
 // #columnsFlex
@@ -558,7 +557,7 @@ a {
 // }
 //
 // #col1, #col3{
-//   background: $background-color;
+//   background: $lightBrand;
 //   padding: $spacing;
 //   margin-left: $spacing;
 //   margin-right: $spacing;
@@ -577,7 +576,7 @@ a {
 // {
 //   @include flex(1.5);
 //   padding: $spacing;
-//   border: 3px solid $background-color;
+//   border: 3px solid $lightBrand;
 //
 //   @media screen and (max-width:$mobile)
 //   {
@@ -589,24 +588,24 @@ a {
 // }
 
 //--------------------Portfolio--------------------//
-#portfolioHeader
-{
-  text-align: center;
-  @include display(flex);
-  @include flex-direction(row);
-  @include justify-content(center);
-  @include align-items(flex-end );
-  background-image: url("/images/GRskylineEx.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  // background-attachment:fixed;
-  background-size:cover;
-  height: 200px;
-  border-bottom: 3px solid $dark-purple;
-  padding-top: 120px;
-  margin-top: 30px;
-
-}
+// #portfolioHeader
+// {
+//   text-align: center;
+//   @include display(flex);
+//   @include flex-direction(row);
+//   @include justify-content(center);
+//   @include align-items(flex-end );
+//   background-image: url("/images/GRskylineEx.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   // background-attachment:fixed;
+//   background-size:cover;
+//   height: 200px;
+//   border-bottom: 3px solid $darkBrand;
+//   padding-top: 120px;
+//   margin-top: 30px;
+//
+// }
 
 // #portfolioTitle
 // {
@@ -619,61 +618,61 @@ a {
 // {
 //   width: 100%;
 //   height: 200px;
-//   fill: $dark-purple;
+//   fill: $darkBrand;
 //   position: fixed;
 //   right: 0px;
 // }
-#rowsFlex
-{
-  @include display(flex);
-  @include flex-direction(column);
-  @include align-items(center);
-  @include justify-content(flex-start);
-  width: 100%;
-  background: white;
-  // margin:$spacingx2;
-  .sites:nth-of-type(even)
-  {
-    background: $background-color;
-  }
-  // padding-bottom: $spacingx2;
-
-}
-
-.sites
-{
-  padding: 60px;
-  @include display(flex);
-  @include flex-direction(row);
-  @include align-items(center);
-  // @include justify-content(space-between);
-}
-
-.siteDesc
-{
-  @include flex(2);
-  padding-right: 60px;
-}
-
-.screenshotsGroup
-{
-  @include display(flex);
-  @include flex-direction(column);
-  @include align-items(center);
-  @include flex(1);
-  margin: 0px;
-}
-
-
-
-.screenshot
-{
-  width: 300px;
-  margin: 15px 0px 15px 15px;
-  border: 2px solid $darker-purple;
-
-
-}
+// #rowsFlex
+// {
+//   @include display(flex);
+//   @include flex-direction(column);
+//   @include align-items(center);
+//   @include justify-content(flex-start);
+//   width: 100%;
+//   background: white;
+//   // margin:$spacingx2;
+//   .sites:nth-of-type(even)
+//   {
+//     background: $lightBrand;
+//   }
+//   // padding-bottom: $spacingx2;
+//
+// }
+//
+// .sites
+// {
+//   padding: 60px;
+//   @include display(flex);
+//   @include flex-direction(row);
+//   @include align-items(center);
+//   // @include justify-content(space-between);
+// }
+//
+// .siteDesc
+// {
+//   @include flex(2);
+//   padding-right: 60px;
+// }
+//
+// .screenshotsGroup
+// {
+//   @include display(flex);
+//   @include flex-direction(column);
+//   @include align-items(center);
+//   @include flex(1);
+//   margin: 0px;
+// }
+//
+//
+//
+// .screenshot
+// {
+//   width: 300px;
+//   margin: 15px 0px 15px 15px;
+//   border: 2px solid $darkBrand;
+//
+//
+// }
 
 // #pineLakeB
 // {
@@ -685,7 +684,7 @@ a {
 // 	float: left;
 // 	cursor: pointer;
 //   margin: 15px 15px 15px 15px;
-//   border: 2px solid $darker-purple;
+//   border: 2px solid $darkBrand;
 // }
 //
 // .tint:before {
@@ -696,7 +695,7 @@ a {
 // 	bottom: 0;
 // 	left: 0;
 // 	right: 0;
-// 	background-color: rgba(157, 150, 158, .6);
+// 	lightBrand: rgba(157, 150, 158, .6);
 // }
 //
 // .tint:hover:before {
@@ -704,37 +703,37 @@ a {
 // }
 
 
-@media screen and (max-width:$mobile)
-{
-  .sites
-  {
-    @include flex-direction(column);
-  }
-  .siteDesc
-  {
-    padding-right: 0px;
-  }
-  .screenshotsGroup
-  {
-    @include display(flex);
-    @include flex-direction(row);
-    @include align-items(center);
-    // @include flex(3);
-    margin-top: 60px;
-  }
-}
-
-@media screen and (max-width:700px)
-{
-  .screenshotsGroup
-  {
-    @include flex-direction(column);
-  }
-  .screenshot
-  {
-    width: 200px;
-  }
-}
+// @media screen and (max-width:$mobile)
+// {
+//   .sites
+//   {
+//     @include flex-direction(column);
+//   }
+//   .siteDesc
+//   {
+//     padding-right: 0px;
+//   }
+//   .screenshotsGroup
+//   {
+//     @include display(flex);
+//     @include flex-direction(row);
+//     @include align-items(center);
+//     // @include flex(3);
+//     margin-top: 60px;
+//   }
+// }
+//
+// @media screen and (max-width:700px)
+// {
+//   .screenshotsGroup
+//   {
+//     @include flex-direction(column);
+//   }
+//   .screenshot
+//   {
+//     width: 200px;
+//   }
+// }
 
 
 
@@ -759,7 +758,7 @@ a {
   padding-bottom: $spacing;
   padding-left: $spacing;
   padding-right: $spacing;
-  // background-color: rgba(157, 150, 158, .2);
+  // lightBrand: rgba(157, 150, 158, .2);
   border-radius: 30px;
   margin-left: 15%;
   margin-right: 15%;
@@ -786,9 +785,9 @@ a {
 
 
   hr{
-    width: 70%;
-    margin-left: 15%;
-    border-top: 3px solid $background-color;
+    width: 50%;
+    // margin-left: 15%;
+    border-top: 3px solid $lightBrand;
     text-align: center;
   }
 }

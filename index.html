@@ -4,9 +4,15 @@ layout: home
 
 <main id="home2">
 
+
   <div id="homeImage">
+    <!-- <h2>Digital Marketing</h2>
+    <p>Avid reader, coffee-lover, and digital marketing specialist living in Holland MI with my dog Loki, who was appropriately named after the Norse god of mischief.</p> -->
+    {% comment %}
     {% include navbar.html %}
+    {% endcomment %}
   </div>
+
 
   <p id="intro">Avid reader, coffee-lover, and digital marketing specialist living in Holland MI with my dog Loki, who was appropriately named after the Norse god of mischief.</p>
 
@@ -14,21 +20,21 @@ layout: home
   <hr>
 
   <div id="rowContainer">
-    <div id="row1" class="homeRows">
-      <svg id="bookIcon" width="101px" height="62px" viewBox="0 0 101 62">
+    <div class="homeRows">
+      <svg id="bookIcon" viewBox="0 0 101 62">
         <g transform="translate(-611.000000, -207.000000)" >
           <g transform="translate(211.000000, 175.000000)">
               <path d="M454.07416,88.7157866 C461.211411,90.4049569 484.430708,91.2084957 493.078369,89.7681277 C494.425505,89.7467798 495.411615,89.6028838 495.917799,89.2936529 L495.952811,89.5435115 L496.659366,89.375029 L496.594788,88.9141799 L490.489558,45.3450484 L490.424981,44.8841993 L489.718426,45.0526817 L489.783003,45.5135308 L495.865441,88.9200027 L480.211319,88.5852365 C467.54752,86.9177437 452.020468,84.4320995 451.996658,87.7376903 C451.566644,87.6438186 451.106409,87.5929653 450.627963,87.5929653 C450.150956,87.5929653 449.69205,87.6435133 449.263148,87.7368448 C449.236697,84.4325234 433.711212,86.9178858 421.048493,88.5852365 L405.394372,88.9200027 L411.476809,45.5135308 L411.541387,45.0526817 L410.834832,44.8841993 L410.770254,45.3450484 L404.665024,88.9141799 L404.600446,89.375029 L405.307001,89.5435115 L405.342013,89.2936529 C405.848198,89.6028838 406.834307,89.7467798 408.181443,89.7681277 C416.826948,91.2081365 440.036824,90.4053575 447.180311,88.7170499 C446.639101,89.1868915 446.318389,89.7709555 446.318389,90.403877 C446.318389,91.9563007 448.247851,93.2147887 450.627963,93.2147887 C453.008076,93.2147887 454.937538,91.9563007 454.937538,90.403877 C454.937538,89.7703881 454.61625,89.1858443 454.07416,88.7157866 Z M495.872453,88.9700468 L495.888234,89.0826624 L495.914824,89.2724228 L495.231828,89.2578168 C495.486164,89.167289 495.700793,89.0714138 495.872453,88.9700468 Z M405.387359,88.9700468 L405.371579,89.0826624 L405.344988,89.2724228 L406.027985,89.2578168 C405.773648,89.167289 405.55902,89.0714138 405.387359,88.9700468 Z M450.627963,36.0595839 C450.627963,36.0595839 445.494047,31.9665436 438.417503,33.2486722 C431.340958,34.5308007 430.191786,38.7238581 424.770517,40.7444367 C419.349248,42.7650153 413.278319,41.6814073 413.278319,41.6814073 L406.813957,87.5929653 C406.813957,87.5929653 417.964866,89.9956682 442.008815,81.0341711 C447.036651,79.1602299 450.627963,86.6559947 450.627963,86.6559947 L450.627963,36.0595839 Z M450.627963,36.308256 C450.627963,36.308256 455.76188,32.2152158 462.838424,33.4973443 C469.914969,34.7794729 471.06414,38.9725303 476.48541,40.9931089 C481.906679,43.0136875 487.977608,41.9300795 487.977608,41.9300795 L494.44197,87.8416375 C494.44197,87.8416375 483.291061,90.2443403 459.247112,81.2828432 C454.219275,79.4089021 450.627963,86.9046669 450.627963,86.9046669 L450.627963,36.308256 Z M408.617745,46.267132 L401.07599,91.7102047 L401,92.1680825 L401.701999,92.3663388 L401.777989,91.9084611 L409.319744,46.4653883 L409.395734,46.0075106 L408.693734,45.8092542 L408.617745,46.267132 Z M401.786121,92.2778182 C401.786121,92.2778182 443.445339,94.1517593 446.318389,92.2778182 L401.786121,92.2778182 Z M492.642068,46.267132 L500.183823,91.7102047 L500.259812,92.1680825 L499.557813,92.3663388 L499.481823,91.9084611 L491.940068,46.4653883 L491.864079,46.0075106 L492.566078,45.8092542 L492.642068,46.267132 Z M499.473692,92.2778182 C499.473692,92.2778182 457.814473,94.1517593 454.941423,92.2778182 L499.473692,92.2778182 Z"></path>
           </g>
         </g></svg>
-        <div>
+        <div id="rowText">
             <h4>Hobbies & Interests</h4>
             <p>When not working on marketing pieces or improving my skills, I am an avid reader, amateur novelist, videogame enthusiast, and chocolate aficionado. I also enjoy cooking, baking, drinking coffee that tastes like chocolate, and trying to convince myself to go running.</p>
             <p>I recently adopted my dog Loki, a 10lb year old shihtzu poodle mix with a big personality, and have been working on training him in basic commands and tricks.</p>
         </div>
     </div>
 
-    <div id="row2" class="homeRows">
+    <div class="homeRows">
       <svg id="computerIcon" viewBox="0 0 70 95">
           <g transform="translate(-217.000000, -175.000000)">
           <g transform="translate(211.000000, 175.000000)">
@@ -36,7 +42,7 @@ layout: home
           </g>
           </g></svg>
 
-        <div>
+        <div id="rowText">
           <h4>Skills</h4>
           <p><strong>Writing</strong>
           I have been trained in technical, professional, and creative writing techniques, and have experience creating and proofing a variety of digital material, including blog posts, website content, newsletters, social media posts, and email content.</p>
@@ -45,9 +51,9 @@ layout: home
         </div>
     </div>
 
-    <div id="row3" class="homeRows">
-      <svg viewBox="93.5 11.75 34 40.75">
-      <path d="M107.867,15.382c0.153,0,0.308-0.005,0.447,0.042c0.14,0.047,0.237,0.182,0.391,0.205c0.079,0.009,0.153-0.005,0.219-0.033
+    <div class="homeRows">
+      <svg id="michiganIcon" viewBox="93.5 11.75 34 40.75">
+      <path stroke-width=".5px" d="M107.867,15.382c0.153,0,0.308-0.005,0.447,0.042c0.14,0.047,0.237,0.182,0.391,0.205c0.079,0.009,0.153-0.005,0.219-0.033
       	c0.042-0.019,0.182-0.07,0.205-0.098c0.089-0.13-0.237-0.163,0.032-0.251c0.131-0.042,0.317-0.088,0.461-0.046
       	c0.136,0.042,0.229,0.191,0.34,0.279c0.252,0.186,0.605,0.27,0.819,0.512c0.103,0.112,0.103,0.293,0.303,0.293
       	c0.074,0,0.103-0.042,0.163-0.061c0.056-0.023,0.149-0.032,0.21-0.046c0.182-0.028,0.362,0.033,0.54,0.046
@@ -133,7 +139,7 @@ layout: home
       	c0.075-0.177-0.042-0.158-0.135-0.284L107.867,15.382z"/>
       	</svg>
 
-        <div>
+        <div id="rowText">
           <h4>History</h4>
           <p>Born and raised in Grand Rapids, I graduated from Davenport University with a bachelor's degree in web design and development. I then decided to combine my web degree with my love of writing and pursued a career in digital marketing.</p>
           <p>I moved to Holland for work and fell in love with the lakeshore. My dog and I enjoy taking walks on the beach where I ponder life, work, and the pursuit of happiness while he eats sand and warns me about waves and boats.</p>
