@@ -31,13 +31,12 @@ $(document).ready(function(){
 
       $('#homeImage').css({
           width: $(window).width(),
-          height: $(window).height() - $('header').height()
+          height: $(window).height()
           // height: $(window).height() - $('nav').height() - $('header').height()
         });
 
         $('#homeImageText').css({
-            height: $(window).height() - $('header').height()
-            // height: $(window).height() - $('nav').height() - $('header').height()
+            height: $(window).height()
           });
 
     }

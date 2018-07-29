@@ -312,11 +312,13 @@ header
       {
         h1
         {
+          margin: 0px 40px 0 40px;
           font-size: $h2-size;
         }
         h3
         {
           font-size: $font-size;
+          margin: 10px 40px 20px 40px;
         }
         width: 100%;
       }
@@ -376,17 +378,6 @@ header
 {
   margin: 60px;
 
-  svg, g{
-    stroke: $lightBrand;
-    fill: white;
-
-    // :hover
-    // {
-    //   stroke: $darkBrand;
-    //   fill: $darkBrand;
-    // }
-}
-
 a {
   display: block;
   width: 120px;
@@ -405,7 +396,7 @@ a {
 
     svg
     {
-      width: 100px;
+      width: 150px;
       margin-left: 0px;
       flex-shrink: 0;
     }
