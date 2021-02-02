@@ -1,0 +1,41 @@
+I"�<p>Budgets are not just for businesses or saving-savvy individuals. A basic budget is not even all that difficult
+to create. The first and most important step is to simply record how much you are spending. Literally, if you do
+this one step, you will see results. And that’s not too hard is it? All you need is a journal, a text document,
+or even better, Microsoft Excel.</p>
+
+<p><br />
+<strong>Tracking Those Starbucks Purchases</strong></p>
+<p>The first step to creating a budget is tracking how much you are actually spending. You might believe that you
+have a rough idea of how much you spend each month, but until you actually see all those little purchases and
+expenses spread out in front of you, it won’t really hit you just how much you dine out or go to starbucks—-and
+as a starbucks fan, I know it will be painful, but you might consider cutting back.</p>
+
+<p>As someone who has recently realized the power of tracking my expenses, I recommend Microsoft Excel for building
+ a tracking table. I created a simple Excel table with the Month as my vertical headers going down the left side,
+ and a series of categories for my spending as my horizontal table headers across the top.</p>
+
+<p>To create your headers, first consider what you spend money on each month. My categories were: Rent, Phone,
+Cable/Internet, Electric, Gas, Groceries, Transportation, Food/Fun, Shopping, and Other.  My first two categories
+are the same each month, as my rent and phone bill is constant. I still included them because it applies to the
+last three categories I included as headers: Total Expenses, Total Income, and Balance.</p>
+
+<p>Microsoft Excel is a great tool for budgeting because you can program the table to automatically add or subtract fields. For instance, my category columns are added up each month into the Total Expenses column. Once I type in my monthly Income (after tax), Excel subtracts my expenses from how much I made, providing me with my Balance; how much money I saved that month.</p>
+
+<p>In addition to my main table, I also included a smaller, temporarily table in that same document. There is likely an easier way to achieve the same results, but not being an excel wizard, I found a simple way to total up purchases before adding them to my main table. My mini-table includes the headers Groceries, Transportation, Food/Fun, Shopping, and Other. In each column I add each individual purchase I make in the category. I then programmed the table so that it automatically totals up the sum of each column. For example, one week my groceries cost $68, so I type $68 into Groceries. If the next time I buy groceries I spend $22, I type $22 in the box below the $68 and the table adds the two together and reports that I have spend $90 so far this month on groceries. At the end of the month I take the total of each column and transfer it to the corresponding column in the main table and then wipe the data from the temp table.</p>
+
+<p><br />
+<strong>Bills, Baking, and Budgets</strong></p>
+<p>Now, once you have recorded two or so months of your expenses, you can look at how much you are spending and figure out how you plan to budget. Maybe you realize, “wow, I spend $100 on coffee each month!” Or “Dang, I must have eaten out like five times each week!” If you look at your table and comments like this run screaming through your mind, these are the areas in which you should consider cutting back.</p>
+
+<p>Make your own coffee most mornings, and treat yourself to a delicious Starbucks only once or twice a week—especially on days you know you will be busier! Cut back dining out to once a week, and take the money you save to join a cooking class so you can learn to make your own Chicken Gnocchi soup and shrimp alfredo pasta—Yes, I am an Olive Garden fan, and it can be done, homemade meals really can taste just as delicious as restaurant-prepared ones.</p>
+
+<p>Maybe you don’t have an “Oh wow” moment when you look at your individual categories. Maybe it’s not until you see how little you are saving each month that you get inspired to budget. Instead of drastically cutting back in a particular category, consider how much you want to save each month, and just cut a little bit of spending from multiple categories.</p>
+
+<p><br />
+<strong>The Blasé Budget</strong></p>
+<p>Budgeting doesn’t have to be a big complicated production of “Ugh I have to eat Raman noodles all week because I bought new headphones.” While some people create budgets and stick to them like glue, I think this merely encourages people to hate budgeting and eventually stop. It’s okay to go over budget a little. It’s okay to go on a shopping spree if you get a new job and need a new wardrobe, or to buy a new car even though obviously that’s going to ruin your monthly budget.</p>
+
+<p>What I do with expenses like those—big, one time expenses—is add them to my Other category with a little footnote explaining what they are. My Other is like a exemption column, stuff that counts towards my Balance, but isn’t actually counted in my budget. That way, they are still included in my monthly expenses, but my Shopping category isn’t so skewed from the average I try to achieve. I don’t want to pretend that it didn’t happen, but I want to be able to see each month how close to my Category goal I was, to know how I am doing overall in sticking to my goals.</p>
+
+<p>So while there are numerous ways to budget, many of them quite complex, even a simple Excel table can help you achieve your goals, or just track your purchases. Maybe it’ll make you realize you love budgeting and saving money! The more you budget, the faster you’ll be able to save up enough money for that James Bond special edition Aston Martin. But well, maybe don’t count on it.</p>
+:ET

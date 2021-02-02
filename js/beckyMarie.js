@@ -36,7 +36,7 @@ $(document).ready(function(){
         });
 
         $('#homeImageText').css({
-            height: $(window).height()
+            height: $(window).height() - $('nav').height() - $('header').height()
           });
 
     }
